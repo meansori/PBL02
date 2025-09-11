@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lampu Lalulintas</title>
+    <style>
+      .lalin {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      .lampu-merah {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        border-radius: 10px;
+      }
+      .lampu-kuning {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        border-radius: 10px;
+      }
+      .lampu-hijau {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Lampu Lalu Lintas</h2>
+    <div class="lalin">
+      <div class="lampu-merah"></div>
+      <div class="lampu-kuning"></div>
+      <div class="lampu-hijau"></div>
+      <h1 id="text-perintah"></h1>
+    </div>
+
+    <script>
+      const input = prompt("Lampu Lalu Lintas saat ini:");
+      if (input.toLowerCase() === "merah") {
+        document.getElementById("text-perintah").innerText = "STOP";
+      } else if (input.toLowerCase() === "kuning") {
+        document.getElementById("text-perintah").innerText = "SIAP-SIAP";
+      } else if (input.toLowerCase() === "hijau") {
+        document.getElementById("text-perintah").innerText = "SILAHKAN JALAN";
+      } else {
+        document.getElementById("text-perintah").innerText = "INVALID INPUT";
+      }
+    </script>
+  </body>
+</html>

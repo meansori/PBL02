@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      class="increment"
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      "
+    >
+      <div id="min">-</div>
+      <div id="result">0</div>
+      <div id="plus">+</div>
+    </div>
+
+    <script>
+      let result = 0;
+      document.getElementById("result").innerText = result;
+      document.getElementById("plus").onclick = function () {
+        result++;
+        document.getElementById("result").innerText = result;
+      };
+      document.getElementById("min").onclick = function () {
+        if (result > 0) {
+          result--;
+          document.getElementById("result").innerText = result;
+        }
+      };
+    </script>
+  </body>
+</html>

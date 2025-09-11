@@ -10,47 +10,68 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        max-width: 800px;
+        height: auto;
+        margin: auto;
+      }
+      .lampu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 20px;
+        border: 2px solid black;
+        width: 210px;
+        height: auto;
+        padding: 20px 0px;
       }
       .lampu-merah {
         width: 100px;
         height: 100px;
-        background-color: red;
+        background-color: rgba(255, 0, 0, 0.3);
         border-radius: 10px;
       }
       .lampu-kuning {
         width: 100px;
         height: 100px;
-        background-color: yellow;
+        background-color: rgba(255, 255, 0, 0.3);
         border-radius: 10px;
       }
       .lampu-hijau {
         width: 100px;
         height: 100px;
-        background-color: green;
+        background-color: rgba(0, 128, 0, 0.3);
         border-radius: 10px;
       }
     </style>
   </head>
   <body>
-    <h2>Lampu Lalu Lintas</h2>
     <div class="lalin">
-      <div class="lampu-merah"></div>
-      <div class="lampu-kuning"></div>
-      <div class="lampu-hijau"></div>
+      <h1>LAMPU LALU LINTAS SAMSAT SOEKARNO HATTA</h1>
+      <div class="lampu">
+        <div class="lampu-merah"></div>
+        <div class="lampu-kuning"></div>
+        <div class="lampu-hijau"></div>
+      </div>
       <h1 id="text-perintah"></h1>
     </div>
 
     <script>
       const input = prompt("Lampu Lalu Lintas saat ini:");
       if (input.toLowerCase() === "merah") {
-        document.getElementById("text-perintah").innerText = "STOP";
+        document.getElementsByClassName("lampu-merah")[0].style.backgroundColor = "rgba(255, 0, 0, 1)";
+        document.getElementById("text-perintah").innerText = "STOP, WAKTU MENUNGGU : 200 DETIK";
       } else if (input.toLowerCase() === "kuning") {
+        document.getElementsByClassName("lampu-kuning")[0].style.backgroundColor = "rgba(255, 255, 0, 1)";
         document.getElementById("text-perintah").innerText = "SIAP-SIAP";
       } else if (input.toLowerCase() === "hijau") {
+        document.getElementsByClassName("lampu-hijau")[0].style.backgroundColor = "rgba(0, 128, 0, 1)";
         document.getElementById("text-perintah").innerText = "SILAHKAN JALAN";
       } else {
-        document.getElementById("text-perintah").innerText = "INVALID INPUT";
+        document.getElementsByClassName("lampu-merah")[0].style.backgroundColor = "rgba(255, 0, 0, 1";
+        // document.getElementsByClassName("lampu-kuning")[0].style.backgroundColor = "rgba(255, 255, 0, 1)";
+        // document.getElementsByClassName("lampu-hijau")[0].style.backgroundColor = "rgba(0, 128, 0, 1)";
+        document.getElementById("text-perintah").innerText = "WAKTU MENUNGGU : 200 DETIK";
       }
     </script>
   </body>

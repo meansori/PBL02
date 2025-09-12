@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let nama = prompt("Masukkan nama:");
+      let jk = prompt("Masukkan jenis kelamin:");
+      let status = prompt("Masukkan jenis status:");
+      if (jk.toLowerCase() === "pria") {
+        if (status.toLowerCase() === "sendiri") {
+          document.write(
+            "Nama: " +
+              nama +
+              "<br>" +
+              "Jenis Kelamin: " +
+              jk +
+              "<br>" +
+              "Status: " +
+              status +
+              "<br>" +
+              "Keterangan: " +
+              "Perjaka"
+          );
+        } else if (status.toLowerCase() === "kawin") {
+          document.write(
+            "Nama: " +
+              nama +
+              "<br>" +
+              "Jenis Kelamin: " +
+              jk +
+              "<br>" +
+              "Status: " +
+              status +
+              "<br>" +
+              "Keterangan: " +
+              "Menikah"
+          );
+        } else {
+          document.write(
+            "Nama: " +
+              nama +
+              "<br>" +
+              "Jenis Kelamin: " +
+              jk +
+              "<br>" +
+              "Status: " +
+              status +
+              "<br>" +
+              "Keterangan: " +
+              "Duda"
+          );
+        }
+      } else if (jk.toLowerCase() === "wanita") {
+        if (status.toLowerCase() === "sendiri") {
+          document.write(
+            "Nama: " +
+              nama +
+              "<br>" +
+              "Jenis Kelamin: " +
+              jk +
+              "<br>" +
+              "Status: " +
+              status +
+              "<br>" +
+              "Keterangan: " +
+              "Perawan"
+          );
+        } else if (status.toLowerCase() === "kawin") {
+          document.write(
+            "Nama: " +
+              nama +
+              "<br>" +
+              "Jenis Kelamin: " +
+              jk +
+              "<br>" +
+              "Status: " +
+              status +
+              "<br>" +
+              "Keterangan: " +
+              "Menikah"
+          );
+        } else {
+          document.write(
+            "Nama: " +
+              nama +
+              "<br>" +
+              "Jenis Kelamin: " +
+              jk +
+              "<br>" +
+              "Status: " +
+              status +
+              "<br>" +
+              "Keterangan: " +
+              "Janda"
+          );
+        }
+      } else {
+        document.write("invalid input");
+      }
+    </script>
+  </body>
+</html>

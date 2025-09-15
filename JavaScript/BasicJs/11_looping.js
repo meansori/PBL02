@@ -4,7 +4,6 @@
 
 // for (let i = 0; i < 5; i++) {
 //   console.log("Perulangan ke-" + i);
-
 // }
 
 // while (kondisi) {
@@ -136,3 +135,39 @@
 // const angka = [1, 2, 3, 4];
 // const total = angka.reduce((acc, a) => acc + a, 0);
 // console.log(total); // 10
+
+//latihan
+// Buat program for yang mencetak angka 1 sampai 10 ke console.
+// for (let i = 1; i <= 10; i++) {
+//   console.log(i);
+// }
+
+// Buat program while yang mencetak angka genap dari 2 sampai 20.
+// let i = 2;
+// while (i <= 20) {
+//   if (i % 2 === 0) {
+//     console.log(i);
+//   }
+//   i++;
+// }
+
+// Buat program do...while yang mencetak "Hello" sebanyak 5 kali.
+// let i = 0;
+// do {
+//   console.log("hello");
+//   i++;
+// } while (i < 5);
+
+// Gunakan for...of untuk mencetak setiap huruf dalam string "Belajar".
+// const kata = "Belajar";
+
+// for (const huruf of kata) {
+//   console.log(huruf);
+// }
+
+// Gunakan for...in untuk mencetak semua properti dan nilainya dari objek berikut:
+
+// const siswa = { nama: "Budi", umur: 17, kelas: "11 IPA" };
+// for (let key in siswa) {
+//   console.log(`${key} : ${siswa[key]} `);
+// }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   199703102005011002;
+      //   197209172005011002;
+      let nama = prompt("Please input name");
+      const dateFormatter = new Intl.DateTimeFormat("id", { day: "numeric", month: "long", weekday: "long", year: "numeric" });
+      let nip = prompt("Please input NIP");
+      let data_tgl = nip.slice(0, 8);
+      const tgl = new Date(data_tgl.replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3")).toLocaleDateString("id-ID", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+      let data_asn = nip.slice(8, 14);
+      const asn = new Date(data_asn.replace(/(\d{4})(\d{2})/, "$1-$2")).toLocaleDateString("id-ID", { month: "long", year: "numeric" });
+      let jk = nip.slice(14, 15);
+      jk = jk == "1" ? "Pria" : "Wanita";
+      let noUrut = nip.slice(15);
+
+      document.write("Nama: " + nama + "<br>");
+      document.write("NIP: " + nip + "<br>");
+      document.write("Tanggal lahir: " + tgl + "<br>");
+      document.write("Tanggal Pengangkatan ASN: " + asn + "<br>");
+      document.write("Jenis Kelamin: " + jk + "<br>");
+      document.write("No Urut: " + noUrut + "<br>");
+    </script>
+  </body>
+</html>

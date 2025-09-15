@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const number_random = Math.random();
+      const input = prompt("please enter a number from 0 to 1, without 1");
+      const number_input = parseFloat(input);
+      const distance = Math.abs(number_random - number_input);
+      if (input == null) document.write("Cancel");
+      else if (input === "") document.write("No Input");
+      else if (isNaN(input)) document.write("No valid number");
+      else if (number_input < 0 || number_input >= 1) document.write("No number in the valid range");
+      else if (distance < 0.1) document.write("You are clos0e");
+      else document.write("Your are far off");
+    </script>
+  </body>
+</html>

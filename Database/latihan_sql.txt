@@ -45,10 +45,10 @@ INSERT siswa VALUES ('1234567890', 'Septiawan', 'Cirendeu', 'Jakarta');
 # Memasukkan banyak record
 INSERT siswa VALUES
 	('1234567890', 'Damayanti', 'Gubeng', 'Surabaya'),
-    ('1234567890', 'Dzakiy', 'Gubeng', 'Surabaya'),
-    ('1234567890', 'Dzaka', 'Ciganitri', 'Bandung'),
-    ('1234567890', 'Nabila', 'Ciganitri', 'Bandung');
-    
+    ('1234567891', 'Dzakiy', 'Gubeng', 'Surabaya'),
+    ('1234567892', 'Dzaka', 'Ciganitri', 'Bandung'),
+    ('1234567893', 'Nabila', 'Ciganitri', 'Bandung');
+    SET SQL_SAFE_UPDATES = 0;
 UPDATE siswa
 SET nis = '2345678901'
 WHERE nama = 'Damayanti';
@@ -70,7 +70,7 @@ ALTER TABLE siswa
     
 # DESCRIBE siswa;
 
-# SELECT 	* FROM 	siswa;
+ SELECT 	* FROM 	siswa;
 
 /* --- Akhir DML --- */
 
@@ -120,7 +120,8 @@ ALTER TABLE siswa
 alter table siswa
 	add foreign key (kd_kota)
     references kota(kode);
-    
+
+
 select	kota.nama, count(kota.nama) as Jumlah_Siswa
 from	siswa, kota
 where	siswa.kd_kota = kota.kode and

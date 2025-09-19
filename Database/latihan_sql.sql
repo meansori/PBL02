@@ -1,6 +1,6 @@
 /* --- Awal DDL --- */
 # Menghapus database
-DROP DATABASE pbl2;
+-- DROP DATABASE pbl2;
 
 # Membuat database
 /*
